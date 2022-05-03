@@ -47,10 +47,19 @@ public class Executer {
 		nombre_acteurs = (int) map.values().stream().flatMap(Collection :: stream).count();
 		System.out.println("Nombre d'acteur: " + nombre_acteurs);
 		
-		// Question 4
+		// Question 4 - 5
 		System.out.println("====================================================================");
-		System.out.println("Question 4: Afficher les 50 premiers acteurs");
+		System.out.println("Question 4-5: Obtenir le nombre d'acteurs réel");
 		System.out.println("====================================================================");
+		int nombre_acteurs_reel = (int) map.values().stream().flatMap(Collection :: stream).distinct().count();
+		System.out.println("Nombre réel d'acteurs: " + nombre_acteurs_reel);
+		
+		// Question 6
+		System.out.println("====================================================================");
+		System.out.println("Question 6: Obtenir le nombre d'acteurs réel");
+		System.out.println("====================================================================");
+		//int nombre_acteurs_reel = (int) map.values().stream().flatMap(Collection :: stream).distinct().count();
+		System.out.println("Nombre réel d'acteurs: " + nombre_acteurs_reel);
 		
 		stream.close();
 	}
